@@ -1,3 +1,13 @@
+def isdigit(string):
+    if not string:
+        return False
+    
+    digits = "0123456789"
+    for characters in string:
+        if characters not in digits:
+            return False
+    return True
+
 def input_validation():
     
     while True:
@@ -5,7 +15,7 @@ def input_validation():
         print()
         length = input("Enter the desired password length (8-128): ")
         
-        if length.isdigit():
+        if isdigit(length):
             
             length = int(length)
             
